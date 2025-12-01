@@ -1,0 +1,333 @@
+@import url("global.css");
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(..//images/wallpaper.jpg);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    transform-style: preserve-3d;
+    transform: perspective(900px);
+}
+
+section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform: translateZ(100px);
+    transition: transform 0.1s ease-out;
+}
+
+.login{
+    transform-style: preserve-3d;
+}
+
+.form-container {
+    border: 2px solid;
+    border-color: var(--borda) var(--borda-dark) var(--borda-dark) var(--borda);
+    padding: 0;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: inset 1px 1px 0px 0px rgba(255,255,255,0.5), inset -1px -1px 0px 0px rgba(0,0,0,0.25);
+    overflow: hidden;
+    background-color: var(--janela);
+    transform-style: preserve-3d;
+    filter: url(#ps1-wobble);
+    image-rendering: pixelated;
+    overflow: hidden;
+}
+
+.window-titlebar {
+    background: linear-gradient(to right, #000080, #1084d7);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 2px;
+    height: 20px;
+}
+
+.titlebar-content {
+    display: flex;
+    align-items: center;
+    padding-left: 4px;
+}
+
+.titlebar-text {
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    font-family: "MS Sans Serif", sans-serif;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.5);
+}
+
+.titlebar-buttons {
+    display: flex;
+    gap: 2px;
+    padding-right: 2px;
+}
+
+.titlebar-btn {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    background-color: var(--botao);
+    border: 1px solid;
+    border-color: var(--borda) var(--borda-dark) var(--borda-dark) var(--borda);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--texto);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "MS Sans Serif", sans-serif;
+    transition: all 0.05s;
+}
+
+.titlebar-btn:active {
+    border-color: var(--borda-dark) var(--borda) var(--borda) var(--borda-dark);
+}
+
+.titlebar-btn:hover {
+    background-color: #e8e8e8;
+}
+
+.minimize-btn::before {
+    content: "_";
+    line-height: 1;
+}
+
+.close-btn::before {
+    content: "×";
+    font-size: 12px;
+    line-height: 1;
+}
+
+.form-container > h1,
+.form-container > p,
+.form-container > form,
+.form-container > .divider,
+.form-container > .sso-container,
+.form-container > .redirect-sign-up {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form-container > h1 {
+    margin-top: 10px;
+}
+
+.form-container > .redirect-sign-up {
+    padding-bottom: 10px;
+}
+
+.form-container h1 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--titulo-blue);
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+}
+
+.form-container > p {
+    font-size: 11px;
+    color: var(--texto);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border: none;
+    padding: 0;
+}
+
+label {
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--texto);
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input[type="password"], 
+input[type="email"],
+input[type="text"] {
+    background-color: white;
+    color: var(--texto); 
+    caret-color: white;
+    border: 2px solid;
+    border-color: var(--borda-dark) var(--borda) var(--borda) var(--borda-dark);
+    padding: 2px 2px;
+    font-size: 11px;
+    font-family: "MS Sans Serif", sans-serif;
+    box-shadow: inset 1px 1px 0px 0px rgba(0,0,0,0.25);
+    height: 20px;
+}
+
+input::placeholder{
+    font-size: 11px;
+    color: #999;
+}
+
+.checkbox {
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    accent-color: #000080;
+}
+
+input[type="checkbox"] {
+    width: 13px;
+    height: 13px;
+
+}
+
+.checkbox > label {
+    font-size: 11px;
+    color: var(--texto);
+}
+
+a {
+    font-size: 11px;
+    color: var(--link);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #0050ba;
+}
+
+button {
+    background-color: var(--botao);
+    border: 2px solid;
+    border-color: var(--borda) var(--borda-dark) var(--borda-dark) var(--borda);
+    box-shadow: inset 1px 1px 0px 0px rgba(255,255,255,0.8), inset -1px -1px 0px 0px rgba(0,0,0,0.3);
+    padding: 4px 12px;
+    font-size: 11px;
+    font-family: "MS Sans Serif", sans-serif;
+    cursor: pointer;
+    color: var(--texto);
+    min-width: 75px;
+    text-align: center;
+    transition: all 0.1s ease;
+}
+
+button:active {
+    border-color: var(--borda-dark) var(--borda) var(--borda) var(--borda-dark);
+    box-shadow: inset -1px -1px 0px 0px rgba(255,255,255,0.8), inset 1px 1px 0px 0px rgba(0,0,0,0.3);
+}
+
+button:hover:not(:active) {
+    background-color: #e8e8e8;
+}
+
+form > button {
+    width: 100%;
+    min-width: auto;
+    margin-top: 5px;
+}
+
+.divider{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.divider > p {
+    font-size: 11px;
+    color: var(--texto);
+    white-space: nowrap;
+}
+
+.line{
+    flex: 1;
+    height: 1px;
+    background-color: var(--borda-dark);
+    border-top: 1px solid var(--borda);
+}
+
+.sso-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.sso-container button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    text-align: center;
+}
+
+.sso-container button p {
+    font-size: 11px;
+}
+
+.sso-container img{
+    width: 16px;
+    height: 16px;
+    display: none;
+}
+
+.redirect-sign-up {
+    margin-top: 15px;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.redirect-sign-up a {
+    color: var(--link);
+    text-decoration: underline;
+    font-size: 11px;
+}
+
+img[alt*="costela"] {
+    display: none;
+}
+
+#three-canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}

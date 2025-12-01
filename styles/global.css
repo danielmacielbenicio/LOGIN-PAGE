@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+PGothic:wght@400;700&display=swap');
+
+:root {
+  --fundo: #008080;
+  --janela: #c0c0c0;
+  --borda: #dfdfdf;
+  --borda-dark: #808080;
+  --texto: #000000;
+  --botao: #c0c0c0;
+  --botao-highlight: #dfdfdf;
+  --botao-shadow: #808080;
+  --link: #000080;
+  --titulo-blue: #1084d7;
+  --text-white: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: none;
+    border: none;
+}
+
+body{
+    font-family: "MS Sans Serif", "Ms PGothic", sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    background-color: var(--fundo);
+}

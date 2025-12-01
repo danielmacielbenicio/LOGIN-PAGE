@@ -1,0 +1,23 @@
+
+body {
+  background: black;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h1{
+  font-size: 5vw;
+  text-shadow: 0px 0px 30px #fff;
+  animation: anim 1s linear infinite alternate;
+}
+
+@keyframes anim {
+  from {text-shadow: 0px 0px 20px #fff;}
+  to {text-shadow: 0px 0px 35px #fff;}
+}
